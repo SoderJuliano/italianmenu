@@ -41,6 +41,10 @@ export default {
         display: block !important;
         font-size: 16px !important;
     }
+
+    .item3 input {
+        min-width: 200px !important;
+    }
 }
 
     .footer {
