@@ -12,6 +12,17 @@ export default {
 }
 </script>
 <style scoped>
+
+    @media (max-width: 768px) {
+        .italy {
+            height: 300px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
     .italy {
         margin-top: 30px;
         display: flex;
@@ -19,7 +30,7 @@ export default {
         height: 260px;
         border-radius: 8px;
         background-image: url("../assets/italia.png");
-        background-size: cover;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         text-align: center;
         justify-content: center;

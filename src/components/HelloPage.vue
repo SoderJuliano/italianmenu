@@ -47,6 +47,23 @@ export default {
 </script>
 <style scoped>
 
+@media (max-width: 768px) {
+    .hello {
+        display: block !important;
+    }
+
+    .hello .left{
+        width: 100% !important;
+    }
+
+    .left p {
+        font-size: 17px !important;
+        margin-top: -75% !important;
+        margin-left: 10% !important;
+        width: 80% !important;
+    }
+}
+
     .left-button {
         text-align: center;
         width: 55%;
