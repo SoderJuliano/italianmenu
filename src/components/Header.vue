@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <img src="../assets/sapory.png" alt="SAPORY">
+        <img class="sapory" src="../assets/sapory.png" alt="SAPORY">
         <div class="midlle">
             <img class="search-icon" src="../assets/ei_search.png" alt="serach...">
             <input type="text" class="search">
@@ -22,6 +22,27 @@ export default {
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+
+    @media (max-width: 768px) {
+        .header.sub {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sub span {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        .sapory {
+            display: none;
+        }
+
+        .midlle {
+            width: 60% !important;
+        }
+    }
+
     .header {
         display: flex;
         padding: 1rem;
