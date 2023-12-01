@@ -62,6 +62,59 @@ export default {
         margin-left: 10% !important;
         width: 80% !important;
     }
+
+    .right {
+        width: 100%!important;
+        margin-top: 10px;
+        height: 400px !important;
+    }
+
+    .right-in {
+        width: 60% !important;
+        font-size: 16px !important;
+    }
+
+    .midle {
+        background-size: 100% 100% !important;
+        height: 200px !important;
+    }
+
+    .midle p {
+        font-size: 16px !important;
+        width: 70% !important;
+        margin-left: 10px;
+    }
+
+    .hello.bottom {
+        display: block!important;
+    }
+
+    .left-bottom {
+        width: 100%!important;
+    }
+
+    .left-bottom p {
+        width: 60% !important;
+        margin-left: 8% !important;
+        margin-top: 56% !important;
+        background-color: whitesmoke !important;
+        font-size: 16px !important;
+    }
+
+    .right-bottom {
+        width: 100% !important;
+    }
+
+    .left-button {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+
+    .right-button {
+        width: 100%!important;
+        font-size: 16px!important;
+        margin-top: 10px;
+    }
 }
 
     .left-button {

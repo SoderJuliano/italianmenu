@@ -35,6 +35,14 @@ export default {
 }
 </script>
 <style scoped>
+
+@media (max-width: 768px) {
+    .footer {
+        display: block !important;
+        font-size: 16px !important;
+    }
+}
+
     .footer {
         margin-top: 50px;
         display: flex;
