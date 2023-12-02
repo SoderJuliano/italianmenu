@@ -11,13 +11,18 @@
         </div>
     </div>
     <div class="header sub">
-        <span>Menu</span><span>Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span>Reservas</span>
+        <span @click="goto('menu')">Menu</span><span>Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span>Reservas</span>
         <span>Preparo</span><span>Sobre Nós</span><span>Contato</span>
     </div>
 </template>
 <script>
 export default {
-    name: "header"
+    name: "header",
+    methods: {
+        goto(where) {
+            this.$emit('updatePage', where);
+        }
+    }
 }
 </script>
 <style scoped>

@@ -31,16 +31,16 @@
         </div>
     </div>
     <div class="hello bottom">
-        <div class="left-button" @click="goto()" ><span>Ver produtos</span></div>
-        <div class="right-button" v-on:click="goto()"><span>Acessar o menu</span></div>
+        <div class="left-button" @click="goto('produtcts')" ><span>Ver produtos</span></div>
+        <div class="right-button" v-on:click="goto('menu')"><span>Acessar o menu</span></div>
     </div>
 </template>
 <script>
 export default {
     name:"Hello",
     methods: {
-        goto() {
-            alert('Em desenvolvimento');
+        goto(where) {
+            this.$emit('updatePage', where);
         }
     }
 }
@@ -165,7 +165,7 @@ export default {
 
     .left img {
         width: 97%;
-        min-height: 220px;
+        height: 220px;
         display: block;
         margin-top: 15px;
     }
@@ -176,8 +176,8 @@ export default {
 
     .left p {
         position: absolute;
-        margin-top: -315px;
-        margin-left: 110px;
+        margin-top: -256px;
+        margin-left: 10%;
         font-size: 27px;
         width: 350px;
         text-align: center;
@@ -267,8 +267,8 @@ export default {
 
     .left-bottom p {
         position: absolute;
-        margin-top: 12%;
-        margin-left: 12%;
+        margin-top: 11%;
+        margin-left: 5%;
         border-radius: 8px;
         background-color: white;
         padding: 22px;
