@@ -11,7 +11,7 @@
         <Header @updatePage="updatePage" />
         <ItalianFlag v-if="page == 'home'" />
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
-        <Menu v-if="page =='menu'" />
+        <Menu v-if="page =='menu'" @updatePage="updatePage" />
         <Footer />
     </div>
 </template>
