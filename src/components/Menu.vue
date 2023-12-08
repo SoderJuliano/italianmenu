@@ -136,6 +136,19 @@ export default {
         font-size: 45px;
     }
 
+@media (max-width: 786px) {
+    .menu-main-body {
+        display: block !important;
+    }
+    .itens {
+        width: auto !important;
+        margin-top: 20px !important;
+    }
+    .itens p {
+        margin-top: 10px !important;
+    }
+}
+
     .menu-main-body {
         display: flex;
         justify-content: start;

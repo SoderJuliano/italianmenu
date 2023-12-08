@@ -24,7 +24,7 @@
             <ul>
                 <li>Instagram</li>
                 <li>Facebook</li>
-                <li>twitter</li>
+                <li>Twitter</li>
             </ul>
         </div>
     </div>
