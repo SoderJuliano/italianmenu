@@ -40,35 +40,35 @@ export default {
                     valor: 27.0,
                     nome: "Spaghetti al pomodoro",
                     descricao: "etc",
-                    img: "/src/assets/spaghettialpomodoro.png"
+                    img: "../assets/spaghettialpomodoro.png"
                 },
                 {
                     id: 2,
                     valor: 32.0,
                     nome: "Fettuccine con polpette",
                     descricao: "etc",
-                    img: "/src/assets/fettuccineconpolpette.png"
+                    img: "../assets/fettuccineconpolpette.png"
                 },
                 {
                     id: 3,
                     valor: 28.0,
                     nome: "Penne al sugo di pomodoro con rosmarino",
                     descricao: "etc",
-                    img: "/src/assets/pennealsugo.png"
+                    img: "../assets/pennealsugo.png"
                 },
                 {
                     id: 4,
                     valor: 34.0,
                     nome: "Tortellini con salsa alfredo di succa",
                     descricao: "etc",
-                    img: "/src/assets/tortelliniconsalsa.png"
+                    img: "../assets/tortelliniconsalsa.png"
                 },
                 {
                     id: 5,
                     valor: 32.0,
                     nome: "Rigatoni al sugo di formaggio",
                     descricao: "etc",
-                    img: "/src/assets/rigatonialsugo.png"
+                    img: "../assets/rigatonialsugo.png"
                 }
             ]
             this.dataarray = newData;
