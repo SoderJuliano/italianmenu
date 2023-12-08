@@ -21,12 +21,20 @@
     </div>
 </template>
 <script>
+
+import img from '@/assets/fettuccineconpolpette.png';
+import spaghettialpomodoro from '@/assets/spaghettialpomodoro.png';
+import fettuccineconpolpette from '@/assets/fettuccineconpolpette.png'
+import pennealsugo from '@/assets/pennealsugo.png';
+import tortelliniconsalsa from '@/assets/tortelliniconsalsa.png';
+import igatonialsugo from '/src/assets/rigatonialsugo.png';
+
 export default {
     name: "Menu",
     data() {
         return {
             dataarray: [],
-            img: "../assets/fettuccineconpolpette.png"
+            img: img
         }
     },
     methods: {
@@ -40,35 +48,35 @@ export default {
                     valor: 27.0,
                     nome: "Spaghetti al pomodoro",
                     descricao: "etc",
-                    img: "../assets/spaghettialpomodoro.png"
+                    img: spaghettialpomodoro
                 },
                 {
                     id: 2,
                     valor: 32.0,
                     nome: "Fettuccine con polpette",
                     descricao: "etc",
-                    img: "../assets/fettuccineconpolpette.png"
+                    img: fettuccineconpolpette
                 },
                 {
                     id: 3,
                     valor: 28.0,
                     nome: "Penne al sugo di pomodoro con rosmarino",
                     descricao: "etc",
-                    img: "../assets/pennealsugo.png"
+                    img: pennealsugo
                 },
                 {
                     id: 4,
                     valor: 34.0,
                     nome: "Tortellini con salsa alfredo di succa",
                     descricao: "etc",
-                    img: "../assets/tortelliniconsalsa.png"
+                    img: tortelliniconsalsa
                 },
                 {
                     id: 5,
                     valor: 32.0,
                     nome: "Rigatoni al sugo di formaggio",
                     descricao: "etc",
-                    img: "../assets/rigatonialsugo.png"
+                    img: igatonialsugo
                 }
             ]
             this.dataarray = newData;
@@ -76,7 +84,6 @@ export default {
     },
     created() {
         this.loadData();
-        console.log(this.dataarray);
     }
 }
 </script>
