@@ -91,6 +91,7 @@ export default {
     .menu {
         display: block;
         height: 100%;
+        flex: 1;
     }
 
     .menu-header p {
