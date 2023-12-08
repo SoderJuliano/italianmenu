@@ -13,7 +13,7 @@
                     <div class="item">
                         <img :src="item.img" alt="foto do produto">
                         <h3>{{item.nome}}</h3>
-                        <p>R$ {{item.valor}}</p>
+                        <p>R$ {{item.valor.toFixed(2)}}</p>
                     </div>
                 </div>
             </div>
@@ -48,6 +48,27 @@ export default {
                     nome: "Fettuccine con polpette",
                     descricao: "etc",
                     img: "/src/assets/fettuccineconpolpette.png"
+                },
+                {
+                    id: 3,
+                    valor: 28.0,
+                    nome: "Penne al sugo di pomodoro con rosmarino",
+                    descricao: "etc",
+                    img: "/src/assets/pennealsugo.png"
+                },
+                {
+                    id: 4,
+                    valor: 34.0,
+                    nome: "Tortellini con salsa alfredo di succa",
+                    descricao: "etc",
+                    img: "/src/assets/tortelliniconsalsa.png"
+                },
+                {
+                    id: 5,
+                    valor: 32.0,
+                    nome: "Rigatoni al sugo di formaggio",
+                    descricao: "etc",
+                    img: "/src/assets/rigatonialsugo.png"
                 }
             ]
             this.dataarray = newData;
@@ -112,15 +133,38 @@ export default {
         display: flex;
         justify-content: start;
         flex-direction: row;
-        flex-wrap: wrap;
     }
 
     .itens {
-        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 25%;
     }
 
-    .itens:first-child {
-        margin-left: 0px;
+    .item {
+        min-width: 255px;
+        width: 95%;
+        height: 495px;
+        text-align: center;
+        position: relative;
+    }
+
+    .item p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-radius: 8px;
+        padding: 5px;
+        text-align: center;
+        font-size: 26px;
+        min-width: 255px;
+        background-color: #D9D9D9;
+    }
+
+    .item img {
+        width: 100%;
     }
 
 </style>
