@@ -188,6 +188,10 @@ export default {
     .itens p {
         margin-top: 10px !important;
     }
+
+    .menu-header {
+        height: 150px !important;
+    }
 }
 
     .menu-main-body {

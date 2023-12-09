@@ -6,8 +6,13 @@
         </div>
     </div>
     <div v-if="page == 'reservation'" class="reservation">
-        <div class="text">
+        <div class="text2">
             <p>Reserva</p>
+        </div>
+    </div>
+    <div v-if="page == 'about'" class="about">
+        <div class="text3">
+            <p>Sobre Nós</p>
         </div>
     </div>
 </template>
@@ -29,6 +34,18 @@ export default {
 
         p {
             font-size: 16px;
+        }
+
+        .about {
+            height: 150px !important;
+        }
+
+        .italy {
+            height: 150px !important;
+        }
+
+        .reservation {
+            height: 150px !important;
         }
     }
 
@@ -60,8 +77,33 @@ export default {
         align-items: center;
     }
 
+    .text2 {
+        font-size: 50px;
+        font-weight: 500;
+    }
+
     .text {
         margin: 0 auto;
         font-size: 24px;
+    }
+
+    .about {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 260px;
+        border-radius: 8px;
+        background-image: url("@imagens/about.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text3 {
+        font-size: 50px;
+        font-weight: 500;
+        color: white;
     }
 </style>

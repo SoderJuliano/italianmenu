@@ -4,14 +4,16 @@
     import Hello from "./HelloPage.vue";
     import Footer from "./Footer.vue";
     import Menu from "./Menu.vue";
+    import Reservation from './Reservation.vue';
 </script>
 
 <template>
     <div class="main" >
         <Header @updatePage="updatePage" />
-        <ItalianFlag :page="page" v-if=" page == 'home' || page == 'reservation'" />
+        <ItalianFlag :page="page" v-if=" page == 'home' || page == 'reservation' || page == 'about'" />
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
         <Menu v-if="page =='menu'" @updatePage="updatePage" />
+        <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
         <Footer />
     </div>
 </template>
