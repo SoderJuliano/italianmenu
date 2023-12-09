@@ -187,10 +187,19 @@ export default {
     }
     .itens p {
         margin-top: 10px !important;
+        font-size: 16px !important;
+    }
+
+    .item h3 {
+        font-size: 16px !important;
     }
 
     .menu-header {
         height: 150px !important;
+    }
+
+    h1 {
+        font-size: 16px !important;
     }
 }
 
