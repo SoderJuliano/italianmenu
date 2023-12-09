@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="header sub">
-        <span @click="goto('menu')">Menu</span><span>Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span>Reservas</span>
+        <span @click="goto('menu')">Menu</span><span>Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span @click="goto('reservation')">Reservas</span>
         <span>Preparo</span><span>Sobre Nós</span><span>Contato</span>
     </div>
 </template>

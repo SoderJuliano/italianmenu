@@ -1,14 +1,23 @@
 <template>
-    <div class="italy">
+    <div v-if="page == 'home'" class="italy">
         <div class="text">
             <img src="../assets/sapory.png" alt="SAPORY">
             <p>especializados em massa italiana</p>
         </div>
     </div>
+    <div v-if="page == 'reservation'" class="reservation">
+        <div class="text">
+            <p>Reserva</p>
+        </div>
+    </div>
 </template>
 <script>
+
 export default {
-    name: "ItalianFlag"
+    name: "ItalianFlag",
+    props: {
+        page: String
+    }
 }
 </script>
 <style scoped>
@@ -36,6 +45,21 @@ export default {
         justify-content: center;
         align-items: center;
     }
+
+    .reservation {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 260px;
+        border-radius: 8px;
+        background-image: url("@imagens/reserved.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
     .text {
         margin: 0 auto;
         font-size: 24px;

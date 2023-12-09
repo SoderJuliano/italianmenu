@@ -9,7 +9,7 @@
 <template>
     <div class="main" >
         <Header @updatePage="updatePage" />
-        <ItalianFlag v-if="page == 'home'" />
+        <ItalianFlag :page="page" v-if=" page == 'home' || page == 'reservation'" />
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
         <Menu v-if="page =='menu'" @updatePage="updatePage" />
         <Footer />
