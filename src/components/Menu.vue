@@ -28,6 +28,11 @@ import fettuccineconpolpette from '@/assets/fettuccineconpolpette.png'
 import pennealsugo from '@/assets/pennealsugo.png';
 import tortelliniconsalsa from '@/assets/tortelliniconsalsa.png';
 import igatonialsugo from '/src/assets/rigatonialsugo.png';
+import fettuccinealpomodoro from '@/assets/fettuccinealpomodoro.png';
+import fusilliaomolhopesto from '@/assets/fusilliaomolho.png';
+import spaghettialaputtanesca from '@/assets/spaghettialaputtanesca.png';
+import spaghettiallacarbonara from '@/assets/spaghettiallacarbonara.png';
+import tortelliniallapanna from '@/assets/tortelliniallapanna.png';
 
 export default {
     name: "Menu",
@@ -77,6 +82,41 @@ export default {
                     nome: "Rigatoni al sugo di formaggio",
                     descricao: "etc",
                     img: igatonialsugo
+                },
+                {
+                    id: 6,
+                    valor: 27.0,
+                    nome: "Fettuccine al pomodoro e basilico",
+                    descricao: "etc",
+                    img: fettuccinealpomodoro
+                },
+                {
+                    id: 7,
+                    valor: 28.0,
+                    nome: "Fusilli ao molho pesto",
+                    descricao: "etc",
+                    img: fusilliaomolhopesto
+                },
+                {
+                    id: 8,
+                    valor: 32.0,
+                    nome: "Spaghetti ala puttanesca",
+                    descricao: "etc",
+                    img: spaghettialaputtanesca
+                },
+                {
+                    id: 9,
+                    valor: 36.0,
+                    nome: "sphaghetti alla carbonara",
+                    descricao: "etc",
+                    img: spaghettiallacarbonara
+                },
+                {
+                    id: 9,
+                    valor: 34.0,
+                    nome: "Tortellini alla panna",
+                    descricao: "etc",
+                    img: tortelliniallapanna
                 }
             ]
             this.dataarray = newData;
@@ -154,6 +194,7 @@ export default {
         display: flex;
         justify-content: start;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .itens {
@@ -161,7 +202,8 @@ export default {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        width: 25%;
+        width: 20%;
+        margin-top: 20px;
     }
 
     .item {
@@ -186,6 +228,10 @@ export default {
 
     .item img {
         width: 100%;
+    }
+
+    .item h3{
+        font-size: 26px;
     }
 
 </style>
