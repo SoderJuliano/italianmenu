@@ -203,6 +203,16 @@ export default {
     }
 }
 
+@media (min-width: 1900px) {
+    .item {
+        min-width: 255px;
+    }
+
+    .item p {
+        min-width: 255px;
+    }
+}
+
     .menu-main-body {
         display: flex;
         justify-content: start;
@@ -220,7 +230,6 @@ export default {
     }
 
     .item {
-        min-width: 255px;
         width: 95%;
         height: 495px;
         text-align: center;
@@ -235,7 +244,6 @@ export default {
         padding: 5px;
         text-align: center;
         font-size: 26px;
-        min-width: 255px;
         background-color: #D9D9D9;
     }
 
