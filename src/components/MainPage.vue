@@ -5,6 +5,7 @@
     import Footer from "./Footer.vue";
     import Menu from "./Menu.vue";
     import Reservation from './Reservation.vue';
+    import AboutUs from "./AboutUs.vue";
 </script>
 
 <template>
@@ -14,6 +15,7 @@
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
         <Menu v-if="page =='menu'" @updatePage="updatePage" />
         <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
+        <AboutUs v-if="page == 'about'" @updatePage="updatePage" />
         <Footer />
     </div>
 </template>
