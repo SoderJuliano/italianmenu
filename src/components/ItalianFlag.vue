@@ -15,6 +15,8 @@
             <p>Sobre Nós</p>
         </div>
     </div>
+
+    <div v-if="page == 'dessert'" class="dessert"></div>
 </template>
 <script>
 
@@ -70,6 +72,21 @@ export default {
         height: 260px;
         border-radius: 8px;
         background-image: url("@imagens/reserved.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .dessert {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 260px;
+        border-radius: 8px;
+        background-image: url("@imagens/sobremesasbanner.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         text-align: center;

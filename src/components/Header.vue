@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="header sub">
-        <span @click="goto('menu')">Menu</span><span>Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span @click="goto('reservation')">Reservas</span>
+        <span @click="goto('menu')">Menu</span><span @click="goto('dessert')">Sobremesas</span><span>Bebidas</span><span>Restaurante</span><span @click="goto('reservation')">Reservas</span>
         <span>Preparo</span><span @click="goto('about')">Sobre Nós</span><span>Contato</span>
     </div>
 </template>
@@ -32,6 +32,7 @@ export default {
         .header.sub {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .sub span {
