@@ -142,6 +142,7 @@ export default {
         background-image: url("../assets/menu.png");
         background-size: 100% 100%;
         height: 260px;
+        min-height: 25vh;
         display: flex;
         text-align: center;
         justify-content: center;

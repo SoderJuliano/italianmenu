@@ -1,22 +1,22 @@
 <template>
-    <div v-if="page == 'home'" class="italy">
+    <div v-if="page == 'home'" class="italy body">
         <div class="text">
             <img src="../assets/sapory.png" alt="SAPORY">
             <p>especializados em massa italiana</p>
         </div>
     </div>
-    <div v-if="page == 'reservation'" class="reservation">
+    <div v-if="page == 'reservation'" class="reservation body">
         <div class="text2">
             <p>Reserva</p>
         </div>
     </div>
-    <div v-if="page == 'about'" class="about">
+    <div v-if="page == 'about'" class="about body">
         <div class="text3">
             <p>Sobre Nós</p>
         </div>
     </div>
 
-    <div v-if="page == 'dessert'" class="dessert"></div>
+    <div v-if="page == 'dessert'" class="dessert body"></div>
 </template>
 <script>
 
@@ -48,6 +48,12 @@ export default {
 
         .reservation {
             height: 150px !important;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .body {
+            min-height: 25vh !important;
         }
     }
 
