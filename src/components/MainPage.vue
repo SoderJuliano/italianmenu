@@ -17,7 +17,7 @@
         <Menu v-if="page =='menu'" @updatePage="updatePage" />
         <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
         <AboutUs v-if="page == 'about'" @updatePage="updatePage" />
-        <Dessert v-if="page == 'dessert'" />
+        <Dessert v-if="page == 'dessert'" @updatePage="updatePage" />
         <Footer />
     </div>
 </template>
