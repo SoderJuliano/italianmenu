@@ -50,6 +50,26 @@ export default {
 }
 </script>
 <style scoped>
+
+@media (max-width: 786px) {
+    .desserts-body {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .desserts-item {
+        width: 100% !important;
+    }
+
+    p {
+        font-size: 16px !important;
+    }
+
+    span {
+        font-size: 16px !important;
+    }
+}
+
 .desserts-body {
     display: flex;
     flex-wrap: wrap;

@@ -7,17 +7,19 @@
     import Reservation from './Reservation.vue';
     import AboutUs from "./AboutUs.vue";
     import Dessert from "./Dessert.vue";
+    import Drinks from "./Drink.vue";
 </script>
 
 <template>
     <div class="main" >
         <Header @updatePage="updatePage" />
-        <ItalianFlag :page="page" v-if=" page == 'home' || page == 'reservation' || page == 'about' || page == 'dessert'" />
+        <ItalianFlag :page="page" v-if="page != 'menu'" />
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
         <Menu v-if="page =='menu'" @updatePage="updatePage" />
         <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
         <AboutUs v-if="page == 'about'" @updatePage="updatePage" />
         <Dessert v-if="page == 'dessert'" @updatePage="updatePage" />
+        <Drinks v-if="page == 'drinks'" @updatePage="updatePage" />
         <Footer />
     </div>
 </template>

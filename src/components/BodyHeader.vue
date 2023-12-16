@@ -18,6 +18,12 @@ export default {
 }
 </script>
 <style scoped>
+
+@media (max-width: 786px) {
+    h1 {
+        font-size: 16px !important;
+    }
+}
     .body-header {
         display: flex;
         justify-content: center;

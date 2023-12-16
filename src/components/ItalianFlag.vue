@@ -17,6 +17,8 @@
     </div>
 
     <div v-if="page == 'dessert'" class="dessert body"></div>
+
+    <div v-if="page == 'drinks'" class="drinks body"></div>
 </template>
 <script>
 
@@ -49,12 +51,30 @@ export default {
         .reservation {
             height: 150px !important;
         }
+
+        .body {
+            height: 150px !important;
+        }
     }
 
     @media (min-width: 1280px) {
         .body {
             min-height: 25vh !important;
         }
+    }
+
+    .drinks {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        height: 260px;
+        border-radius: 8px;
+        background-image: url("../assets/bebidas.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .italy {
