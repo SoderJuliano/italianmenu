@@ -250,6 +250,7 @@ export default {
 
     .item img {
         width: 100%;
+        height: 291px;
     }
 
     .item h3{
