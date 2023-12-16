@@ -9,7 +9,7 @@
             <div class="desserts-item" v-for="(item, index) in desserts" :key="index">
                 <img :src="item.image" alt="item">
                 <p>{{item.name}}</p>
-                <span class="price">{{item.valor}}</span>
+                <span class="price">R$ {{item.valor.toFixed(2)}}</span>
             </div>
         </div>
     </div>
@@ -44,7 +44,42 @@ export default {
 .desserts-body {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.desserts-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 520px;
+    justify-content: space-around;
+    width: 20%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.desserts-item img {
+    width: 95%;
+    height: 291px;
+}
+
+p {
+    font-size: 26px;
+    position: absolute;
+    top: 300px;
+}
+
+span {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: center;
+    font-size: 26px;
+    background-color: #D9D9D9;
 }
 
 </style>

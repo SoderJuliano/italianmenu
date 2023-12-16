@@ -232,7 +232,7 @@ export default {
 
     .item {
         width: 95%;
-        height: 495px;
+        height: 520px;
         text-align: center;
         position: relative;
     }
