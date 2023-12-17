@@ -13,6 +13,7 @@
                     <div class="item">
                         <img :src="item.img" alt="foto do produto">
                         <h3>{{item.nome}}</h3>
+                        <h3 v-if="item.size" class="size">{{ item.size }}</h3>
                         <p>R$ {{item.valor.toFixed(2)}}</p>
                     </div>
                 </div>
@@ -33,7 +34,16 @@ import fusilliaomolhopesto from '@/assets/fusilliaomolho.png';
 import spaghettialaputtanesca from '@/assets/spaghettialaputtanesca.png';
 import spaghettiallacarbonara from '@/assets/spaghettiallacarbonara.png';
 import tortelliniallapanna from '@/assets/tortelliniallapanna.png';
-
+import bolognese from '@imagens/bolognese.png';
+import capricciosa from '@imagens/capricciosa.png';
+import crudo from '@imagens/crudo.png';
+import formaggi from '@imagens/formaggi.png';
+import funghi from '@imagens/funghi.png';
+import peperoni from '@imagens/peperoni.png';
+import pollo from '@imagens/pollo.png';
+import primavera from '@imagens/primavera.png';
+import theformaggi from '@imagens/tre-formaggi.png';
+import vegane from '@imagens/vegane.png';
 export default {
     name: "Menu",
     data() {
@@ -112,11 +122,81 @@ export default {
                     img: spaghettiallacarbonara
                 },
                 {
-                    id: 9,
+                    id: 10,
                     valor: 34.0,
                     nome: "Tortellini alla panna",
                     descricao: "etc",
                     img: tortelliniallapanna
+                },
+                {
+                    id: 11,
+                    valor: 40.0,
+                    nome: "Quattro formaggi",
+                    descricao: "etc",
+                    img: formaggi, size: "8 fatias"
+                },
+                {
+                    id: 12,
+                    valor: 46.0,
+                    nome: "Capricciosa",
+                    descricao: "etc",
+                    img: capricciosa, size: "8 fatias"
+                },
+                {
+                    id: 13,
+                    valor: 44.0,
+                    nome: "peperoni",
+                    descricao: "etc",
+                    img: peperoni, size: "8 fatias"
+                },
+                {
+                    id: 14,
+                    valor: 42.0,
+                    nome: "primavera",
+                    descricao: "etc",
+                    img: primavera, size: "8 fatias"
+                },
+                {
+                    id: 15,
+                    valor: 46.0,
+                    nome: "Prosciutto crudo",
+                    descricao: "etc",
+                    img: crudo, size: "8 fatias"
+                },
+                {
+                    id: 16,
+                    valor: 45.0,
+                    nome: "Lasagne di pollo con catupiry",
+                    descricao: "etc",
+                    img: pollo, size: "p/ 2 pessoas"
+                },
+                {
+                    id: 17,
+                    valor: 40.0,
+                    nome: "Lasagna vegane",
+                    descricao: "etc",
+                    img: vegane, size: "p/ 2 pessoas"
+                },
+                {
+                    id: 18,
+                    valor: 47.0,
+                    nome: "Lasagna con funghi e formaggio",
+                    descricao: "etc",
+                    img: funghi, size: "p/ 2 pessoas"
+                },
+                {
+                    id: 19,
+                    valor: 40.0,
+                    nome: "Lasagna bolognese",
+                    descricao: "etc",
+                    img: bolognese, size: "p/ 2 pessoas"
+                },
+                {
+                    id: 20,
+                    valor: 47.0,
+                    nome: "Lasagne ai tre formaggi",
+                    descricao: "etc",
+                    img: theformaggi, size: "p/ 2 pessoas"
                 }
             ]
             this.dataarray = newData;
@@ -255,6 +335,13 @@ export default {
 
     .item h3{
         font-size: 26px;
+    }
+
+    .size {
+        position: absolute;
+        width: 100%;
+        bottom: 90px;
+        text-align: center;
     }
 
 </style>
