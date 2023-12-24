@@ -3,7 +3,7 @@
         <img class="sapory" src="../assets/sapory.png" alt="SAPORY">
         <div class="midlle">
             <img class="search-icon" src="../assets/ei_search.png" alt="serach...">
-            <input type="text" class="search">
+            <input type="text" class="search" placeholder="Pesquise aqui" v-model="search" @keyup="searchData">
         </div>
         <div class="rigth">
             <img src="../assets/ph_user-circle-thin.png" alt="account">
@@ -15,12 +15,78 @@
         <span>Preparo</span><span @click="goto('about')">Sobre Nós</span><span>Contato</span>
     </div>
 </template>
+<script setup>
+    import { pastas } from './allitensData';
+    import { drinks } from './allitensData';
+    import { desserts } from './allitensData';
+</script>
 <script>
 export default {
     name: "header",
+    data(){
+        return {
+            search: "",
+            headerssoptions: ["início", "inicio", "inicial", "menu", "sobre nos", "sobre nós", "sobremesa", "bebida", "reserva", "preparo", "contato"],        
+        }
+    },
     methods: {
         goto(where) {
             this.$emit('updatePage', where);
+        },
+        shearchInArraysObjects(search) {
+            if(drinks(search).length > 0) {
+                return "drinks";
+            }else if (desserts(search).length > 0) {
+                return "dessert";
+            }else if (pastas(search).length > 0) {
+                return "menu"
+            }else return null;
+        },
+        searchData () {
+            if(this.headerssoptions.includes(this.search.toLowerCase())) {
+                switch (this.search.toLowerCase()) {
+                    case 'menu':
+                        this.goto('menu');
+                        break;
+                    case 'sobre nos':
+                        this.goto('about');
+                        break;
+                    case 'sobre nós':
+                        this.goto('about');
+                        break;
+                    case 'sobremesa':
+                        this.goto('dessert');
+                        break;
+                    case 'inicio':
+                        this.goto('home');
+                        break;
+                    case 'início':
+                        this.goto('home');
+                        break;
+                    case 'inicial':
+                        this.goto('home');
+                        break;
+                    case 'bebida':
+                        this.goto('drinks');
+                        break;
+                    case 'reserva':
+                        this.goto('reservation');
+                        break;
+                    case 'preparo':
+                        this.goto('home');
+                        break;
+                    case 'contato':
+                        this.goto('contact');
+                        break;
+                    default:
+                        break;
+                }
+            } else if (this.search.length > 4){
+                const found = this.shearchInArraysObjects(this.search);
+                if(found != null) {
+                    this.goto(found);
+                }
+            }
         }
     }
 }
