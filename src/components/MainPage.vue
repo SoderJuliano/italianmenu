@@ -12,14 +12,14 @@
 
 <template>
     <div class="main" >
-        <Header @updatePage="updatePage" />
+        <Header :cart-itens="cartItens" @updatePage="updatePage" />
         <ItalianFlag :page="page" v-if="page != 'menu'" />
         <Hello v-if="page == 'home'" @updatePage="updatePage" />
-        <Menu v-if="page =='menu'" @updatePage="updatePage" />
+        <Menu v-if="page =='menu'" @updatePage="updatePage" @updateCart="updateCart"/>
         <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
         <AboutUs v-if="page == 'about'" @updatePage="updatePage" />
         <Dessert v-if="page == 'dessert'" @updatePage="updatePage" />
-        <Drinks v-if="page == 'drinks'" @updatePage="updatePage" />
+        <Drinks v-if="page == 'drinks'" @updatePage="updatePage" @updateCart="updateCart"/>
         <Footer />
     </div>
 </template>
@@ -27,13 +27,18 @@
 export default {
     name:"main",
     methods: {
+        updateCart(id){
+            console.log(id);
+            this.cartItens++;
+        },
         updatePage(val) {
             this.page = val;
         }
     },
     data(){
         return{
-            page: "home"
+            page: "home",
+            cartItens: 0
         }
     }
 }

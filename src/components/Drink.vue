@@ -16,9 +16,10 @@
         <BodyHeader title="Bebidas" @updatePage="handleEvent" />
         <div class="drinks-body">
             <div class="drinks-item" v-for="(item, index) in drinks" :key="index">
+                <img class="cart" :id="'cart-item-'+item.name" src="../assets/game-icons_shopping-cart.png" alt="cart">
                 <img :src="item.img" alt="item">
                 <p>{{item.name}}</p>
-                <span class="price">R$ {{item.price.toFixed(2)}}</span>
+                <span @click="addToCart(item.name)" class="price">R$ {{item.price.toFixed(2)}}</span>
             </div>
         </div>
     </div>
@@ -26,6 +27,13 @@
 <script>
 export default {
     methods: {
+        addToCart(id){
+            document.getElementById("cart-item-"+id).style.display = "block";
+            setTimeout(() => {
+                document.getElementById("cart-item-"+id).style.display = "none";
+            }, 1500);
+            this.$emit("updateCart", id);
+        },
         handleEvent(page) {
             this.$emit('updatePage', page);
         }
@@ -160,6 +168,10 @@ p {
     top: 300px;
 }
 
+.price:active {
+    scale: .9;
+}
+
 span {
     position: absolute;
     bottom: 0;
@@ -170,5 +182,15 @@ span {
     font-size: 26px;
     background-color: #D9D9D9;
 }
+
+.cart {
+        display: none;
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 0%;
+        width: 40% !important;
+        height: 20% !important;
+        filter: invert(1);
+    }
 
 </style>

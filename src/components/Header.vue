@@ -8,6 +8,7 @@
         <div class="rigth">
             <img src="../assets/ph_user-circle-thin.png" alt="account">
             <img src="../assets/game-icons_shopping-cart.png" alt="cart">
+            <span v-if="cartItens > 0" class="cart-additions">{{ cartItens }}</span>
         </div>
     </div>
     <div class="header sub">
@@ -23,10 +24,13 @@
 <script>
 export default {
     name: "header",
+    props: {
+        cartItens: Number
+    },
     data(){
         return {
             search: "",
-            headerssoptions: ["início", "inicio", "inicial", "menu", "sobre nos", "sobre nós", "sobremesa", "bebida", "reserva", "preparo", "contato"],        
+            headerssoptions: ["início", "inicio", "inicial", "menu", "sobre nos", "sobre nós", "sobremesa", "sobremesas", "bebida", "bebidas", "reserva", "preparo", "contato"],
         }
     },
     methods: {
@@ -160,4 +164,18 @@ export default {
     .sub span:hover {
         border-bottom: 1px solid black;
     }
+
+    .cart-additions {
+        color: red;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        font-size: 20px;
+        background-color: #f5f5f5ba;
+        margin-left: -20px;
+        text-align: center;
+        border-radius: 50%;
+        font-weight: 600;
+    }
+
 </style>

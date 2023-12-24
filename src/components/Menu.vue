@@ -11,10 +11,11 @@
             <div class="menu-main-body">
                 <div class="itens" v-for="(item, index) in dataarray" :key="index" >
                     <div class="item">
+                        <img class="cart" :id="'cart-item-'+item.id" src="../assets/game-icons_shopping-cart.png" alt="cart">
                         <img :src="item.img" alt="foto do produto">
                         <h3>{{item.nome}}</h3>
                         <h3 v-if="item.size" class="size">{{ item.size }}</h3>
-                        <p>R$ {{item.valor.toFixed(2)}}</p>
+                        <p @click="addToCart(item.id)">R$ {{item.valor.toFixed(2)}}</p>
                     </div>
                 </div>
             </div>
@@ -44,6 +45,7 @@ import pollo from '@imagens/pollo.png';
 import primavera from '@imagens/primavera.png';
 import theformaggi from '@imagens/tre-formaggi.png';
 import vegane from '@imagens/vegane.png';
+
 export default {
     name: "Menu",
     data() {
@@ -53,6 +55,13 @@ export default {
         }
     },
     methods: {
+        addToCart(id){
+            document.getElementById("cart-item-"+id).style.display = "block";
+            setTimeout(() => {
+                document.getElementById("cart-item-"+id).style.display = "none";
+            }, 1500);
+            this.$emit("updateCart", id);
+        },
         goto(page) {
             this.$emit('updatePage', page);
         },
@@ -328,6 +337,10 @@ export default {
         background-color: #D9D9D9;
     }
 
+    .item p:active {
+        scale: .9;
+    }
+
     .item img {
         width: 100%;
         height: 291px;
@@ -342,6 +355,16 @@ export default {
         width: 100%;
         bottom: 90px;
         text-align: center;
+    }
+
+    .cart {
+        display: none;
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 30%;
+        width: 40% !important;
+        height: 20% !important;
+        filter: invert(1);
     }
 
 </style>
