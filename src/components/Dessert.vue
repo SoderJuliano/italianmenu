@@ -16,9 +16,10 @@
         <BodyHeader title="Sobremesas" @updatePage="handleEvent" />
         <div class="desserts-body">
             <div class="desserts-item" v-for="(item, index) in desserts" :key="index">
+                <img class="cart" :id="'cart-item-'+item.name" src="../assets/game-icons_shopping-cart.png" alt="cart">
                 <img :src="item.image" alt="item">
                 <p>{{item.name}}</p>
-                <span class="price">R$ {{item.valor.toFixed(2)}}</span>
+                <span @click="addToCart(item.name)" class="price">R$ {{item.valor.toFixed(2)}}</span>
             </div>
         </div>
     </div>
@@ -27,6 +28,13 @@
 export default {
     name: "Dessert",
     methods: {
+        addToCart(id){
+            document.getElementById("cart-item-"+id).style.display = "block";
+            setTimeout(() => {
+                document.getElementById("cart-item-"+id).style.display = "none";
+            }, 1500);
+            this.$emit("updateCart", id);
+        },
         handleEvent(page) {
             this.$emit('updatePage', page);
         }
@@ -110,5 +118,19 @@ span {
     font-size: 26px;
     background-color: #D9D9D9;
 }
+
+.price:active {
+    scale: .9;
+}
+
+.cart {
+        display: none;
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 0%;
+        width: 40% !important;
+        height: 20% !important;
+        filter: invert(1);
+    }
 
 </style>

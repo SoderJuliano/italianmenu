@@ -18,7 +18,7 @@
         <Menu v-if="page =='menu'" @updatePage="updatePage" @updateCart="updateCart"/>
         <Reservation v-if="page == 'reservation'" @updatePage="updatePage" />
         <AboutUs v-if="page == 'about'" @updatePage="updatePage" />
-        <Dessert v-if="page == 'dessert'" @updatePage="updatePage" />
+        <Dessert v-if="page == 'dessert'" @updatePage="updatePage" @updateCart="updateCart"/>
         <Drinks v-if="page == 'drinks'" @updatePage="updatePage" @updateCart="updateCart"/>
         <Footer />
     </div>
